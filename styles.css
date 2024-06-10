@@ -27,6 +27,15 @@ body{
     flex-direction: column;
     align-items: center;
 }
+#miniräknare-three{
+    border: 2px solid black;
+    width: 230px;
+    height: 330px;
+    background-color: #2C2F36;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .top{
     width: 100%;
     height: 100%;
@@ -49,10 +58,25 @@ body{
     height: 100%;
     background-color: white;
 }
+.bottom-three{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 85%;
+    height: 80%;
+    
+}
 .display{
     height: 50px;
     width: 100%;
     padding: 10px;
+}
+.display-bg3{
+    background-color: #171A21;
+    width: 70%;
+    height: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 .buttons{
     display: grid;
@@ -63,8 +87,10 @@ body{
 .two{
     gap: 6px;
     padding: 6px 15px;
-
-    
+}
+.three{
+ gap: 8px;
+ padding: 6px 0px;  
 }
 .one button{
     text-align: center;
@@ -89,6 +115,18 @@ body{
     font-family: "Karla", sans-serif;
     font-weight: bold;
 }
+.three button{
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 5px;
+    font-family: 'Inconsolata', sans-serif;
+    font-weight: bold;
+}
+
+
 input{
     text-align: right;
     width: 100%;
@@ -212,3 +250,115 @@ input:focus{
     grid-area: 1 / 1 /2 / 2;
     color: #E71D36
 }
+/*Second calc*/
+
+
+
+/*third calc*/
+
+
+.bottom-three .three button:nth-child(1){   /* 00 */
+    grid-area: 5 / 1 / 5 / 2;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+    
+}
+.bottom-three .three button:nth-child(2){   /* 0 */
+    grid-area: 5/2/5/3;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(3){   /* . */
+    grid-area: 5/3/5/4;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(4){   /* 1 */
+    grid-area: 4/1/4/2;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+    
+}
+.bottom-three .three button:nth-child(5){   /* 2 */
+    grid-area: 4/2/4/3;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(6){   /* 3 */
+    grid-area: 4/3/4/4;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(7){   /* 4 */
+    grid-area: 3 / 1 / 3 / 2;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(8){   /* 5 */
+    grid-area: 3 / 2 / 3 /3;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(9){   /* 6 */
+    grid-area: 3 / 3 / 3 /4;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(10){  /* 7 */
+    grid-area: 2 / 1 / 2 /2;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(11){  /* 8 */
+    grid-area: 2 / 2 / 2 / 3;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(12){  /* 9 */
+    grid-area: 2 / 3 / 2 / 4;
+    background-color: #74b9ff;
+    border: 3px solid #4a90e2;
+}
+.bottom-three .three button:nth-child(13){  /* C */
+    grid-area: 1 / 1 /2 / 2;
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:nth-child(14){  /* x */
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:nth-child(15){  /* / */
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:nth-child(16){  /* + */
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:nth-child(17){  /* - */
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:nth-child(18){  /* % */
+    background-color: #ff7675;
+    border: 2px solid #e74c3c;
+}
+.bottom-three .three button:last-child{  /* = */
+    grid-area: 4 / 4 / 6 / 5;
+    background-color: #fcd000;
+    border: 2px solid #e1a600;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+/*third calc*/
