@@ -8,27 +8,40 @@ body{
     justify-content: start;
     align-items: center;
     font-family: "Inconsolata", monospace;
-    background-color: #9B9FB5;
+    background-color: #71B48D;
+    position: relative;
 }
 .inactive-calc{
-    display: flex;
+    display: none;
     justify-content: flex-start;
     align-items: center;
+    height: 150px;
     margin-bottom: 2em;
 }
 .header{
     text-align: center;
     font-size: 2.6em;
     color: white;
-    margin-top: 3em;
+
+}
+.mini-header{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    font-size: 1.4rem;
+}
+.active{
+
 }
 .miniräknare-container{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15em;
-    margin-top: 6em;
+    gap: 12em;
+    margin-top: 1em;
 }
 #miniräknare-one{
     border: 2px solid black;
@@ -140,7 +153,7 @@ body{
     padding: 10px;
     font-size: 0.9rem;
     background-color: white;
-    box-shadow: 0px 2px 4px rgba(119, 135, 139, 0.5);
+    box-shadow: 0px 2px 4px rgba(119, 135, 139, 0.8);
     color: black;
     border: none;
     border-radius: 8px;
