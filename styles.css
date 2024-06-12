@@ -400,15 +400,22 @@ input:focus{
     border: 2px solid #e1a600;
     
 }
-
-
-
-
-
-
-
-
-
-
-
 /*third calc*/
+
+
+
+
+@media(min-width:1600px){
+    body{
+        justify-content: center;
+    }
+    .miniräknare-container{
+        margin-top: 3em;
+    }
+    .mini-header{
+        top: 250px;
+        left: 250px;
+        font-size: 1.6rem;
+    }
+
+}
