@@ -5,6 +5,8 @@ const inputOne = document.querySelector(".input-one");
 const inputTwo = document.querySelector(".input-two");
 const inputThree = document.querySelector(".input-three");
 
+const bottomTwo = document.querySelector(".bottom-two");
+
 const miniOne = document.getElementById("miniräknare-one");
 const miniTwo = document.getElementById("miniräknare-two");
 const miniThree = document.getElementById("miniräknare-three");
@@ -17,6 +19,139 @@ const miniHeader = document.querySelector(".mini-header");
 
 const myCalcs = document.querySelectorAll(".calc");
 
+const pickerContainerOne = document.querySelector(".pc-one");
+const pickerOriginalOne = document.querySelector(".picker-one-original");
+const pickerDarkGreenOne = document.querySelector(".picker-one-darkGreen");
+const pickerPurpleOne = document.querySelector(".picker-one-purple");
+const pickerRedOne = document.querySelector(".picker-one-red");
+
+const pickerContainerTwo = document.querySelector(".pc-two");
+const pickerOriginalTwo = document.querySelector(".picker-original-two")
+const pickerPinkTwo = document.querySelector(".picker-pink-two")
+const pickerBlueTwo = document.querySelector(".picker-blue-two")
+
+
+function addPickerOne(){
+    
+pickerContainerOne.style.display ="flex";
+pickerContainerTwo.style.display ="none";
+
+pickerOriginalOne.addEventListener("click",() => {
+    miniOne.style.backgroundColor ="#183446";
+    inputOne.id="";
+
+    buttonsOne.forEach((button) => {
+        if(button.value === "C"){
+            button.style.backgroundColor ="#A40606"
+            button.style.color ="white";
+        }else if(button.value === "="){
+            button.style.backgroundColor ="#3c5a99";
+            button.style.color ="white";
+        }
+        button.id ="";
+        button.style.boxShadow ="-1px -1px 0 0 #000, 1px 1px 0 0 #000";
+        miniOne.style.border ="2px solid black"
+    })
+})
+
+pickerDarkGreenOne.addEventListener("click",() => {
+    miniOne.style.backgroundColor ="#1C7C54";
+    inputOne.id ="darkGreen-one";
+    inputOne.style.backgroundColor="transparent"
+    buttonsOne.forEach((button) => {
+        
+        if(button.value === "C"){
+            button.style.backgroundColor ="#004D00"
+            button.style.color ="white";
+        }else if(button.value === "="){
+            button.style.backgroundColor ="#004D00";
+            button.style.color ="white";
+        }
+        
+        button.id ="darkGreen-one"
+        button.style.boxShadow ="-1px -1px 0 0 #000, 1px 1px 0 0 #000";
+        miniOne.style.border ="2px solid black"
+    })
+})
+
+pickerPurpleOne.addEventListener("click",() => {
+    miniOne.style.backgroundColor ="#7A28CB";
+    inputOne.id ="purple-one";
+    inputOne.style.backgroundColor="transparent"
+    buttonsOne.forEach((button) => {
+        
+        if(button.value === "C"){
+            button.style.backgroundColor ="#AC5AFD"
+            button.style.color ="white";
+        }else if(button.value === "="){
+            button.style.backgroundColor ="#AC5AFD";
+            button.style.color ="white";
+        }
+        
+        button.id ="purple-one"
+        button.style.boxShadow = "-1px -1px 0 0 #FFF, 1px 1px 0 0 #FFF";
+        miniOne.style.border ="2px solid white"
+    })
+})
+
+pickerRedOne.addEventListener("click",() => {
+    miniOne.style.backgroundColor ="#ED1C24";
+    inputOne.id ="red-one";
+    inputOne.style.backgroundColor="transparent"
+    buttonsOne.forEach((button) => {
+        
+        if(button.value === "C"){
+            button.style.backgroundColor ="#A80000"
+            button.style.color ="white";
+        }else if(button.value === "="){
+            button.style.backgroundColor ="#A80000";
+            button.style.color ="white";
+        }
+        
+        button.id ="red-one"
+        button.style.boxShadow = "-1px -1px 0 0 #FFF, 1px 1px 0 0 #FFF";
+        miniOne.style.border ="2px solid white"
+    })
+})
+}
+
+function addPickerTwo(){
+    pickerContainerTwo.style.display ="flex";
+    pickerContainerOne.style.display = "none";
+
+
+    pickerOriginalTwo.addEventListener("click",() => {
+
+        miniTwo.style.backgroundColor ="#B14AED";
+        bottomTwo.style.backgroundColor ="white";
+
+        buttonsTwo.forEach((button) =>{
+            button.id ="";
+        })
+    })
+
+
+
+    pickerPinkTwo.addEventListener("click",() => {
+        miniTwo.style.backgroundColor ="#DC0073";
+        bottomTwo.style.backgroundColor ="#B80062";
+
+        buttonsTwo.forEach((button) => {
+            button.id="pink-two"
+            
+        })
+    })
+
+    pickerBlueTwo.addEventListener("click",() => {
+        miniTwo.style.backgroundColor = "#2667FF";
+        bottomTwo.style.backgroundColor ="white";
+
+        buttonsTwo.forEach((button) => {
+            button.id ="blue-two"
+        })
+    })
+
+}
 
 function checkActive(){
     myCalcs.forEach((calc,index) => {
@@ -120,6 +255,7 @@ function handleMiniOneClick(){
     myCalcs[1].classList.add("inactive")
 
     checkActive();
+    addPickerOne();
 }
 
 function handleMiniTwoClick(){
@@ -146,6 +282,7 @@ function handleMiniTwoClick(){
     myCalcs[2].classList.add("inactive")
 
     checkActive();
+    addPickerTwo();
 }
 
 function handleMiniThreeClick(){
