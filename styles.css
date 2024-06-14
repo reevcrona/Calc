@@ -113,6 +113,10 @@ body{
     background-color:#2667FF;
     color: white;
 }
+#black-two{
+    background-color: #231F20;
+    color: white;
+}
 #miniräknare-one{
     border: 2px solid black;
     width: 230px;

@@ -29,6 +29,7 @@ const pickerContainerTwo = document.querySelector(".pc-two");
 const pickerOriginalTwo = document.querySelector(".picker-original-two")
 const pickerPinkTwo = document.querySelector(".picker-pink-two")
 const pickerBlueTwo = document.querySelector(".picker-blue-two")
+const pickerBlackTwo = document.querySelector(".picker-black-two");
 
 
 function addPickerOne(){
@@ -150,6 +151,18 @@ function addPickerTwo(){
             button.id ="blue-two"
         })
     })
+
+
+    pickerBlackTwo.addEventListener("click",() => {
+        miniTwo.style.backgroundColor ="white"
+        bottomTwo.style.background =  "#231F20"
+        inputTwo.style.color = "black"
+
+        buttonsTwo.forEach((button) => {
+            
+        })
+    })
+
 
 }
 
