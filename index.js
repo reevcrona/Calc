@@ -32,10 +32,17 @@ const pickerBlueTwo = document.querySelector(".picker-blue-two")
 const pickerBlackTwo = document.querySelector(".picker-black-two");
 
 
+const pickerContainerThree = document.querySelector(".pc-three");
+const pickerOriginalThree = document.querySelector(".picker-original-three");
+const pickerGreenThree = document.querySelector(".picker-green-three")
+
+
+
 function addPickerOne(){
     
 pickerContainerOne.style.display ="flex";
 pickerContainerTwo.style.display ="none";
+pickerContainerThree.style.display ="none";
 
 pickerOriginalOne.addEventListener("click",() => {
     miniOne.style.backgroundColor ="#183446";
@@ -119,7 +126,7 @@ pickerRedOne.addEventListener("click",() => {
 function addPickerTwo(){
     pickerContainerTwo.style.display ="flex";
     pickerContainerOne.style.display = "none";
-
+    pickerContainerThree.style.display ="none";
 
     pickerOriginalTwo.addEventListener("click",() => {
 
@@ -135,7 +142,7 @@ function addPickerTwo(){
 
     pickerPinkTwo.addEventListener("click",() => {
         miniTwo.style.backgroundColor ="#DC0073";
-        bottomTwo.style.backgroundColor ="#B80062";
+        bottomTwo.style.background ="#B80062";
 
         buttonsTwo.forEach((button) => {
             button.id="pink-two"
@@ -145,7 +152,7 @@ function addPickerTwo(){
 
     pickerBlueTwo.addEventListener("click",() => {
         miniTwo.style.backgroundColor = "#2667FF";
-        bottomTwo.style.backgroundColor ="white";
+        bottomTwo.style.background ="white";
 
         buttonsTwo.forEach((button) => {
             button.id ="blue-two"
@@ -154,16 +161,38 @@ function addPickerTwo(){
 
 
     pickerBlackTwo.addEventListener("click",() => {
-        miniTwo.style.backgroundColor ="white"
+        miniTwo.style.backgroundColor ="#231F20"
         bottomTwo.style.background =  "#231F20"
-        inputTwo.style.color = "black"
 
         buttonsTwo.forEach((button) => {
-            
+            button.id ="black-two"
         })
     })
+}
 
 
+function addPickerThree(){
+    pickerContainerTwo.style.display ="none";
+    pickerContainerOne.style.display = "none";
+    pickerContainerThree.style.display ="flex";
+
+    pickerGreenThree.addEventListener("click",() =>{
+        buttonsThree.forEach((button,index) => {
+            if(index < 12){
+                button.style.backgroundColor =" #6b8e23";
+            }else if(button.value === "="){
+                button.style.backgroundColor =" #fffafa     "
+                button.style.color ="black"
+                
+            }
+            else{
+                button.style.backgroundColor ="#ff8c00  "
+               
+                
+                
+            }
+        })
+    })
 }
 
 function checkActive(){
@@ -321,6 +350,7 @@ function handleMiniThreeClick(){
     myCalcs[1].classList.add("inactive")
     miniHeader.style.opacity = "1";
     checkActive();
+    addPickerThree();
 }
 
 miniOne.addEventListener("click",handleMiniOneClick)
