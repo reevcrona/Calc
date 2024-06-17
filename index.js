@@ -34,9 +34,10 @@ const pickerBlackTwo = document.querySelector(".picker-black-two");
 
 const pickerContainerThree = document.querySelector(".pc-three");
 const pickerOriginalThree = document.querySelector(".picker-original-three");
-const pickerGreenThree = document.querySelector(".picker-green-three")
+const pickerWoodThree = document.querySelector(".picker-wood-three")
+const pickerTestThree = document.querySelector(".picker-test-three");
 
-
+const displayThreeDiv = document.querySelector(".display-bg")
 
 function addPickerOne(){
     
@@ -63,20 +64,26 @@ pickerOriginalOne.addEventListener("click",() => {
 })
 
 pickerDarkGreenOne.addEventListener("click",() => {
-    miniOne.style.backgroundColor ="#1C7C54";
+    miniOne.style.backgroundColor ="#6b8e23";
     inputOne.id ="darkGreen-one";
     inputOne.style.backgroundColor="transparent"
-    buttonsOne.forEach((button) => {
+    buttonsOne.forEach((button,index) => {
         
-        if(button.value === "C"){
-            button.style.backgroundColor ="#004D00"
-            button.style.color ="white";
-        }else if(button.value === "="){
-            button.style.backgroundColor ="#004D00";
-            button.style.color ="white";
-        }
-        
-        button.id ="darkGreen-one"
+            if(index < 12){
+                button.id="darkGreen-one"
+            }else if(button.value === "="){
+                button.style.backgroundColor =" #ff4500 "
+                
+                
+            }else if(button.value === "C"){
+                button.style.background ="#ff8c00"
+            }
+            else{
+                button.id="darkGreen-one-operations"
+               
+                
+                
+            }
         button.style.boxShadow ="-1px -1px 0 0 #000, 1px 1px 0 0 #000";
         miniOne.style.border ="2px solid black"
     })
@@ -161,11 +168,26 @@ function addPickerTwo(){
 
 
     pickerBlackTwo.addEventListener("click",() => {
-        miniTwo.style.backgroundColor ="#231F20"
-        bottomTwo.style.background =  "#231F20"
+        miniTwo.style.backgroundColor ="#e9967a" 
+        bottomTwo.style.background =  "#fff9c4 "
 
-        buttonsTwo.forEach((button) => {
-            button.id ="black-two"
+        buttonsTwo.forEach((button,index) => {
+            if(index < 12){
+                button.id="cadet-blue-two"
+                
+            }else if(button.value === "="){
+                button.id="dark-salmon-two"
+                
+                
+            }else if(button.value === "C"){
+               button.id="dark-salmon-two"
+            }
+            else{
+                button.id="dark-salmon-two"
+               
+                
+                
+            }
         })
     })
 }
@@ -176,23 +198,79 @@ function addPickerThree(){
     pickerContainerOne.style.display = "none";
     pickerContainerThree.style.display ="flex";
 
-    pickerGreenThree.addEventListener("click",() =>{
+
+    pickerOriginalThree.addEventListener("click",() => {
+        displayThreeDiv.classList.add("display-bg-og")
+        displayThreeDiv.classList.remove("display-bg-wood")
+        miniThree.classList.remove("wood-three")
+        miniThree.style.backgroundColor ="#2C2F36"
+        inputThree.style.background ="#171A21"
+
+
         buttonsThree.forEach((button,index) => {
             if(index < 12){
-                button.style.backgroundColor =" #6b8e23";
+                button.id="original-numb-three"
             }else if(button.value === "="){
-                button.style.backgroundColor =" #fffafa     "
-                button.style.color ="black"
+                button.id="original-equals-three"
+               
                 
             }
             else{
-                button.style.backgroundColor ="#ff8c00  "
+                button.id="original-op-three"
                
                 
                 
             }
         })
     })
+
+
+    pickerWoodThree.addEventListener("click",() =>{
+        miniThree.classList.add("wood-three")
+        miniThree.style.backgroundColor ="#987654"
+        inputThree.style.background ="#333"
+        
+        displayThreeDiv.classList.add("display-bg-wood")
+        
+        buttonsThree.forEach((button,index) => {
+            if(index < 12){
+                button.id="wood-numb-three"
+            }else if(button.value === "="){
+                button.id="wood-op-three"
+                
+            }
+            else{
+                button.id="wood-op-three"
+               
+                
+                
+            }
+        })
+    })
+
+    pickerTestThree.addEventListener("click",() =>{
+        
+        miniThree.style.background = "linear-gradient(135deg, #6f42c1, #e83e8c)"
+        
+        buttonsThree.forEach((button,index) => {
+            if(index < 12){
+                button.style.background ="#6f42c1"
+                button.id="test-glow"
+            }else if(button.value === "="){
+               button.style.backgroundColor ="#6c757d"
+                
+            }
+            else{
+                button.style.background ="#e83e8c"
+               
+                
+                
+            }
+        })
+    })
+
+
+
 }
 
 function checkActive(){

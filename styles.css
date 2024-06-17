@@ -40,7 +40,7 @@ body{
     background-color: #183446;
 }
 .pc-one button:nth-child(2){
-    background-color: #214E34;
+    background: linear-gradient(to top, #6b8e23, #ff8c00,  #ff4500);
 }
 .pc-one button:nth-child(3){
     background-color: #7A28CB;
@@ -59,8 +59,18 @@ body{
     background-color: #2667FF;
 }
 .pc-two button:nth-child(4){
-    background-color: #231F20;
+    background: linear-gradient(to top, #5f9ea0, #e9967a, #fff9c4);;
 }
+
+.pc-three button:nth-child(1){
+    background: linear-gradient(to top, #74b9ff, #ff7675, #fcd000);
+}
+.pc-three button:nth-child(2){
+    background-color: #d2b48c;
+    background-image: url(images/wood-pattern.png);
+}
+
+
 .inactive-calc{
     display: none;
     justify-content: flex-start;
@@ -94,8 +104,11 @@ body{
     margin-top: 1em;
 }
 #darkGreen-one{
-    background-color: #1C7C54;
+    background-color: #6b8e23;
     color: white;
+}
+#darkGreen-one-operations{
+    background-color: #ff8c00;
 }
 #purple-one{
     background-color: #7A28CB;
@@ -116,10 +129,54 @@ body{
     color: white;
     
 }
-#black-two{
-    background-color: white;
-    color: black;
+#cadet-blue-two{
+    background-color: #5f9ea0;
+    color: white;
 }
+#dark-salmon-two{
+    background-color: #e9967a;
+    color: white;
+}
+
+#original-numb-three{
+   background-color: #74b9ff;
+}
+#original-op-three{
+    background-color: #ff7675;
+}
+#original-equals-three{
+    background-color: #fcd000;
+    color: white;
+}
+
+#wood-numb-three{
+    background-color:#d2b48c ;
+    background-image: url(images/tileable-wood-colored.png);
+    background-size: cover;
+}
+#wood-op-three{
+    background-color: #ff8c00;
+    background-image: url(images/dark-wood.png);
+    background-size: cover;
+}
+
+#test-glow{
+    position: relative;
+    overflow: hidden;
+}
+#test-glow:hover{
+    box-shadow: 0 0 20px 10px rgba(175, 66, 193);
+}
+
+
+
+
+
+
+.wood-three{
+    background-image: url("images/wood-pattern.png");
+}
+
 #miniräknare-one{
     border: 2px solid black;
     width: 230px;
@@ -153,6 +210,8 @@ body{
     flex-direction: column;
     align-items: center;
     transition: 0.3s ease-in-out;
+    
+   
 }
 .top{
     width: 100%;
@@ -190,12 +249,22 @@ body{
     width: 100%;
     padding: 10px;
 }
-.display-bg3{
+.display-bg{
     background-color: #171A21;
     width: 70%;
     height: 35px;
     border-radius: 10px;
+    
+}
+.display-bg-og{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: none;
+    
+}
+.display-bg-wood{
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.5);
+    border: 4px solid #d2b48c;
 }
 .buttons{
     display: grid;
@@ -253,7 +322,8 @@ body{
     font-family: 'Inconsolata', sans-serif;
     font-weight: bold;
     border: none;
-    
+    transition: 0.3s ease-in-out;
+
 }
 .three button:hover{
     cursor: pointer;
