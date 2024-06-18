@@ -35,9 +35,14 @@ const pickerBlackTwo = document.querySelector(".picker-black-two");
 const pickerContainerThree = document.querySelector(".pc-three");
 const pickerOriginalThree = document.querySelector(".picker-original-three");
 const pickerWoodThree = document.querySelector(".picker-wood-three")
-const pickerTestThree = document.querySelector(".picker-test-three");
+const pickerPinkThree = document.querySelector(".picker-pink-three");
+const pickerYellowThree = document.querySelector(".picker-yellow-three")
 
 const displayThreeDiv = document.querySelector(".display-bg")
+
+const yellowImages = document.querySelector(".yellow-images")
+
+
 
 function addPickerOne(){
     
@@ -201,11 +206,15 @@ function addPickerThree(){
 
     pickerOriginalThree.addEventListener("click",() => {
         displayThreeDiv.classList.add("display-bg-og")
+        displayThreeDiv.classList.add("display-bg")
         displayThreeDiv.classList.remove("display-bg-wood")
         miniThree.classList.remove("wood-three")
         miniThree.style.backgroundColor ="#2C2F36"
         inputThree.style.background ="#171A21"
-
+        miniThree.classList.remove("pink-three")
+        yellowImages.style.display ="none"
+        displayThreeDiv.classList.remove("display-bg-yellow")
+        inputThree.classList.remove("black-input")
 
         buttonsThree.forEach((button,index) => {
             if(index < 12){
@@ -226,11 +235,15 @@ function addPickerThree(){
 
 
     pickerWoodThree.addEventListener("click",() =>{
+        miniThree.classList.remove("pink-three")
         miniThree.classList.add("wood-three")
         miniThree.style.backgroundColor ="#987654"
         inputThree.style.background ="#333"
-        
+        displayThreeDiv.classList.add("display-bg")
+        yellowImages.style.display ="none"
         displayThreeDiv.classList.add("display-bg-wood")
+        displayThreeDiv.classList.remove("display-bg-yellow")
+        inputThree.classList.remove("black-input")
         
         buttonsThree.forEach((button,index) => {
             if(index < 12){
@@ -248,28 +261,54 @@ function addPickerThree(){
         })
     })
 
-    pickerTestThree.addEventListener("click",() =>{
-        
-        miniThree.style.background = "linear-gradient(135deg, #6f42c1, #e83e8c)"
-        
+    pickerPinkThree.addEventListener("click",() =>{
+        displayThreeDiv.classList.add("display-bg")
+        miniThree.classList.add("pink-three")
+        displayThreeDiv.classList.remove("display-bg-wood")
+        displayThreeDiv.classList.remove("display-bg-yellow")
+        inputThree.style.background ="#171A21"
+        yellowImages.style.display ="none"
+        inputThree.classList.remove("black-input")
+
         buttonsThree.forEach((button,index) => {
             if(index < 12){
-                button.style.background ="#6f42c1"
-                button.id="test-glow"
+                button.id="pink-numb-three"
             }else if(button.value === "="){
-               button.style.backgroundColor ="#6c757d"
+               button.id="pink-equals-three"
                 
             }
             else{
-                button.style.background ="#e83e8c"
-               
+                button.id="pink-op-three"
                 
                 
             }
         })
     })
 
+    pickerYellowThree.addEventListener("click",() =>{
+        
+        miniThree.style.backgroundColor ="#F7D02C"
+        inputThree.style.backgroundColor ="#C0C0C0"
+        displayThreeDiv.classList.add("display-bg-yellow");
+        displayThreeDiv.classList.remove("display-bg-wood")
+        displayThreeDiv.classList.remove("display-bg")
+        miniThree.classList.remove("pink-three")
+        miniThree.classList.remove("wood-three")
+        yellowImages.style.display ="block"
+        inputThree.classList.add("black-input")
 
+        buttonsThree.forEach((button,index) => {
+            if(index < 12){
+                button.id="yellow-numb-three"
+            }else if(button.value === "="){
+              button.id="yellow-equals-three"
+                
+            }
+            else{
+                button.id="yellow-op-three"
+            }
+        })
+    })
 
 }
 
