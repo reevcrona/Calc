@@ -668,5 +668,11 @@ input:focus{
         left: 250px;
         font-size: 1.6rem;
     }
+    .color-text{
+        width: 120px;
+    }
+    .color-picker-container{
+        right: 650px;
+    }
 
 }
